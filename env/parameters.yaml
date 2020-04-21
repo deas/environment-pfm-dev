@@ -1,0 +1,10 @@
+adminUser:
+  password: local:pfm/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: andreas.steffan.ext@hermesworld.com
+  token: local:pfm/pipelineUser:token
+  username: deas
+prow:
+  hmacToken: local:pfm/prow:hmacToken
