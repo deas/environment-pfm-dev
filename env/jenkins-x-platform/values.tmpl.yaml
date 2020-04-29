@@ -1,7 +1,5 @@
 {{- if hasKey .Requirements.cluster "registry" }}
 dockerRegistry: "{{ .Requirements.cluster.registry }}"
-  persistence:
-    accessMode: 'ReadWriteMany'
 {{- end }}
 
 
@@ -12,6 +10,10 @@ JXBasicAuth: "{{ .Parameters.adminUser.username }}:{SHA}{{ .Parameters.adminUser
 
 cleanup:
   enabled: false
+
+docker-registry:
+  persistence:
+    accessMode: 'ReadWriteMany'
 
 chartmuseum:
   persistence:
