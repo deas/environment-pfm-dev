@@ -16,7 +16,7 @@ environments:
 - ingress:
     domain: 10.168.1.28.nip.io
     externalDNS: false
-    namespaceSubDomain: .jx
+    namespaceSubDomain: .jx.
     tls:
       email: ""
       enabled: false
@@ -47,7 +47,7 @@ gitops: true
 ingress:
   domain: 10.168.1.28.nip.io
   externalDNS: false
-  namespaceSubDomain: .jx
+  namespaceSubDomain: .jx.
   tls:
     email: ""
     enabled: false
