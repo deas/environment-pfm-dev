@@ -1,5 +1,7 @@
 {{- if hasKey .Requirements.cluster "registry" }}
 dockerRegistry: "{{ .Requirements.cluster.registry }}"
+  persistence:
+    accessMode: 'ReadWriteMany'
 {{- end }}
 
 
@@ -12,7 +14,9 @@ cleanup:
   enabled: false
 
 chartmuseum:
-{{- if and (hasKey .Requirements "repository") (eq .Requirements.repository "bucketrepo") }}
+  persistence:
+    accessMode: 'ReadWriteMany'
+  {{- if and (hasKey .Requirements "repository") (eq .Requirements.repository "bucketrepo") }}
   enabled: false
 {{- else }}
   env:
@@ -22,6 +26,8 @@ chartmuseum:
 {{- end }}
 
 nexus:
+  persistence:
+    accessMode: 'ReadWriteMany'
   defaultAdminPassword: "{{ .Parameters.adminUser.password }}"
 {{- if hasKey .Requirements "repository"}}
 {{- if or (eq .Requirements.repository "nexus") (eq .Requirements.repository "") }}
@@ -34,6 +40,8 @@ nexus:
 {{- end }}
 
 jenkins:
+  Persistence:
+    AccessMode: ReadWriteMany
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
 
