@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: deas
+  repo: jx-golang-sample
+  url: https://github.com/deas/jx-golang-sample.git
+  version: ""
+  versionURL: ""

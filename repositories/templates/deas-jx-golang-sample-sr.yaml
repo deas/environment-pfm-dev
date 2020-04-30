@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: deas
+    provider: github
+    repository: jx-golang-sample
+  name: deas-jx-golang-sample
+spec:
+  description: Imported application for deas/jx-golang-sample
+  httpCloneURL: https://github.com/deas/jx-golang-sample.git
+  org: deas
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-golang-sample
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/deas/jx-golang-sample.git
